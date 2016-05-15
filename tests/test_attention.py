@@ -24,8 +24,8 @@ def test_batched_dot():
     B_shape = (dim1, dim3, dim4)
     C_shape = (dim1, dim2, dim4)
 
-    A = np.arange(np.prod(A_shape)).reshape(A_shape).astype(floatX)
-    B = np.arange(np.prod(B_shape)).reshape(B_shape).astype(floatX)
+    A = np.arange(np.prod(A_shape)).reshape(A_shape).astype(np.float32)
+    B = np.arange(np.prod(B_shape)).reshape(B_shape).astype(np.float32)
 
     C = c.eval({a: A, b: B})
 
